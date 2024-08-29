@@ -16,9 +16,7 @@ class BookmarksController < ApplicationController
   end
 
   def show
-    @list = List.find(params[:list_id])
-    @bookmarks = @list.bookmarks.all
-    raise
+    @bookmarks = Bookmark.find(params[:id])
   end
 
   private

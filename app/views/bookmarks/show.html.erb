@@ -1,6 +1,6 @@
-<h1>Comments for film <%= @movie.title %></h1>
+<h1>Comments for film <%= @bookmarks.movie.title %></h1>
 <ul>
-  <% @bookmarks.each do |e| %>
+  <% @bookmarks.movie.bookmarks.each do |e| %>
   <li><%= e.comment %></li>
   <% end %>
 </ul>
