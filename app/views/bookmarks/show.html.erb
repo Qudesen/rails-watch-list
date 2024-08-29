@@ -1,0 +1,8 @@
+<h1>Comments for film <%= @movie.title %></h1>
+<ul>
+  <% @bookmarks.each do |e| %>
+  <li><%= e.comment %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Go back to lists", lists_path %>

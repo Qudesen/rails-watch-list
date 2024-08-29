@@ -1,0 +1,8 @@
+<h1>Films includes in this list</h1>
+<ul>
+  <% @lists.movies.each do |e| %>
+  <li><%= link_to e.title, list_bookmark_path(@lists) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Go back to lists", lists_path %>
