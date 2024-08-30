@@ -1,9 +1,11 @@
+<div class="container col-6">
 <h1>Bookmarks in this list</h1>
 <ul>
   <% @bookmarks.each do |e| %>
-    <li><%= e.comment %> </li>
+    <li><%= e.comment %> - <%= e.movie.title %> - <%= link_to "Delete", list_bookmark_path(e), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></li>
   <% end %>
 </ul>
 
 <%= link_to "Go back to list", lists_path %>
 <%= link_to "Create a bookmark", new_list_bookmark_path(params[:id]) %>
+</div>
